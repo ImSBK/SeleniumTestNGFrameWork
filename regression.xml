@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+	<listeners>
+		<listener class-name="com.dpx.cds.WebFrameWork.listeners.TestListener" />
+		<!--<listener class-name="com.dpx.cds.WebFrameWork.listeners.Retry" />-->
+	</listeners>
+	<test thread-count="5" name="HomeTest" parallel="classes">
+		<parameter name="environment" value="DEV" />
+		<parameter name="browser" value="CHROME" />
+		<classes>
+			<class name="com.dpx.cds.WebFrameWork.tests.HomeTests" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="LoginTest" parallel="tests">
+		<parameter name="environment" value="QA" />
+		<parameter name="browser" value="FIREFOX" />
+		<classes>
+			<class name="com.dpx.cds.WebFrameWork.tests.LoginTests" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
