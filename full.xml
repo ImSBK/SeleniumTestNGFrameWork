@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="tests">
 	<listeners>
 		<listener class-name="com.dpx.cds.WebFrameWork.listeners.TestListener" />
-		<!--<listener class-name="com.dpx.cds.WebFrameWork.listeners.Retry" />-->
+		<!--<listener class-name="com.dpx.cds.WebFrameWork.listeners.Retry" />--->
 	</listeners>
 	<test thread-count="5" name="HomeTest" parallel="classes">
 		<parameter name="environment" value="DEV" />
